@@ -1,0 +1,3 @@
+from typing import Any, Callable
+
+def csrf_exempt(*args:Any, **kwargs:Any) -> Callable: ...

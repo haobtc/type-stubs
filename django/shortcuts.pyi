@@ -1,0 +1,9 @@
+from typing import Dict, Any, List, Union, Iterable, Optional, Tuple, Set
+from django.http import HttpRequest, HttpResponse
+from django.db.models import Model
+
+def render(request:HttpRequest, template_name:str, context:Any=None, content_type:str=None, status:int=None, using:str=None) -> HttpResponse: ...
+
+def redirect(to:str, *args:Any, permanent:bool=False, **kwargs:Any) -> HttpResponse: ...
+
+def get_object_or_404(*args:Any, **kwargs:Any) -> Model: ...

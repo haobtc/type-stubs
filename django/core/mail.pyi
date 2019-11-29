@@ -1,0 +1,3 @@
+from typing import Optional, List, Any
+
+def send_mail(subject:str='', message:str='', from_email:str='', recipient_list:Optional[List[str]]=None, **kwargs:Any) -> None: ...

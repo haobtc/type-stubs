@@ -1,0 +1,3 @@
+from typing import Any
+
+def atomic(using:str='default') -> Any: ...

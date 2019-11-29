@@ -1,0 +1,9 @@
+from argparse import ArgumentParser
+
+class BaseCommand:
+    help: str
+    def add_arguments(self, parser:ArgumentParser) -> None: ...
+    def handle(self, *args, **options) -> None: ...
+
+class CommandError(Exception):
+    ...

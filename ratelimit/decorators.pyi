@@ -1,0 +1,3 @@
+from typing import Callable, Any
+
+def ratelimit(*args:Any, **kwargs:Any) -> Callable: ...
