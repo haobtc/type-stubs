@@ -29,7 +29,7 @@ class IntegerField(Field):
 
 class SmallIntegerField(Field):
     def __get__(self, instance:Any, owner:Any) -> int: ...
-    
+
 class BigIntegerField(Field):
     def __get__(self, instance:Any, owner:Any) -> int: ...
 
@@ -38,6 +38,9 @@ class CharField(Field):
 
 class TextField(Field):
     def __get__(self, instance:Any, owner:Any) -> str: ...
+
+class AutoField(Field):
+    def __get__(self, instance:Any, owner:Any) -> int: ...
 
 class BooleanField(Field):
     def __get__(self, instance:Any, owner:Any) -> bool: ...

@@ -15,7 +15,7 @@ class PortOpt:
 
 class IntOpt:
     def __init__(self, name:str, default:int=0, help:str='', **kwargs): ...
-    
+
 class BoolOpt:
     def __init__(self, name:str, default:bool=False, help:str='', **kwargs): ...
 
@@ -25,6 +25,3 @@ class StrOpt:
 
 class ConfigOpts:
     def __getattr__(self, name:str) -> Any: ...
-    
-    
-    
