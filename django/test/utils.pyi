@@ -1,0 +1,3 @@
+from typing import Any
+
+def override_settings(attr:str, value:Any): ...

@@ -1,5 +1,6 @@
 class TestCase:
    def setUp(self): ...
    def tearDown(self): ...
+
 class TransactionTestCase(TestCase):
    pass
