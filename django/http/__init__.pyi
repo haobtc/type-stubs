@@ -10,6 +10,8 @@ class HttpRequest:
     path: str
     method: str
     user: User
+    org: Any
+    body: str
 
 class HttpResponse:
     def __init__(self, content: Any, **kwargs: Any): ...
@@ -23,5 +25,9 @@ class HttpResponseBadRequest(HttpResponse):
 class HttpResponseRedirect(HttpResponse):
     def __init__(self, url: str, **kwargs: Any): ...
 
+class HttpResponseForbidden(HttpResponse):
+    def __init__(self, **kwargs: Any): ...
+
 class HttpError(Exception): ...
 class Http404(HttpError): ...
+

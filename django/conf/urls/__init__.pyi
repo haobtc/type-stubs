@@ -1,0 +1,3 @@
+from typing import Union, Tuple, Any
+
+def include(spec:Any, namespace:str=''): ...
