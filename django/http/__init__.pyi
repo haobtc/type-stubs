@@ -2,15 +2,19 @@ from typing import Dict, Any, List, Union, Iterable, Optional, Tuple, Set
 from collections import OrderedDict
 from django.contrib.auth.models import User
 
+class HttpQuery(OrderedDict):
+    def getlist(self, key:str, default:List[str]=[]): ...
+    
 class HttpRequest:
-    GET: OrderedDict
-    POST: OrderedDict
+    GET: HttpQuery
+    POST: HttpQuery
     META: Dict[str, Any]
     COOKIES: Dict[str, Any]
     path: str
     method: str
     user: User
     org: Any
+    member: Any
     body: str
 
 class HttpResponse:
