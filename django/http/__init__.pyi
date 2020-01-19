@@ -8,8 +8,8 @@ class HttpQuery(OrderedDict):
 class HttpRequest:
     GET: HttpQuery
     POST: HttpQuery
-    META: Dict[str, Any]
-    COOKIES: Dict[str, Any]
+    META: Dict[str, str]
+    COOKIES: Dict[str, str]
     path: str
     method: str
     user: User
