@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class HttpQuery(OrderedDict):
     def getlist(self, key:str, default:List[str]=[]): ...
-    
+
 class HttpRequest:
     GET: HttpQuery
     POST: HttpQuery
