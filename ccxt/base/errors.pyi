@@ -4,3 +4,6 @@ class RequestTimeout(Exception):
 
 class ExchangeError(Exception):
     pass
+
+class ExchangeNotAvailable(ExchangeError):
+    pass
