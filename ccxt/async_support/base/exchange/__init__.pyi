@@ -1,3 +1,5 @@
+from typing import Dict, Any
 
 class Exchange:
-    pass
+    async def fetch_ticker(self, symbol_name:str) -> Dict[str, Any]: ...
+    async def fetch_order_book(self, symbol_name:str) -> Dict[str, Any]: ...    
