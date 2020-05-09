@@ -7,3 +7,6 @@ class ExchangeError(Exception):
 
 class ExchangeNotAvailable(ExchangeError):
     pass
+
+class BadRequest(ExchangeError):
+    pass
