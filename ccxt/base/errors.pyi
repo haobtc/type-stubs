@@ -1,8 +1,11 @@
 
-class RequestTimeout(Exception):
+class BaseError(Exception):
     pass
 
-class ExchangeError(Exception):
+class RequestTimeout(BaseError):
+    pass
+
+class ExchangeError(BaseError):
     pass
 
 class ExchangeNotAvailable(ExchangeError):
