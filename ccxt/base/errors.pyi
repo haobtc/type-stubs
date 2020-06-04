@@ -9,11 +9,14 @@ class NetworkError(BaseError):
 class ExchangeError(BaseError):
     pass
 
-# derived from network error
+# inherited from network error
 class RequestTimeout(NetworkError):
     pass
 
 class DDoSProtection(NetworkError):
+    pass
+
+class RateLimitExceeded(DDoSProtection):
     pass
 
 class ExchangeNotAvailable(NetworkError):
@@ -22,12 +25,19 @@ class ExchangeNotAvailable(NetworkError):
 class InvalidNonce(NetworkError):
     pass
 
-# derived from ExchangeError
+# inherited from ExchangeError
 class BadRequest(ExchangeError):
+    pass
+
+class BadSymbol(BadRequest):
     pass
 
 class BadResponse(ExchangeError):
     pass
+
+class NullResponse(BadResponse):
+    pass
+
 
 class NotSupported(ExchangeError):
     pass
@@ -35,7 +45,14 @@ class NotSupported(ExchangeError):
 class InvalidOrder(ExchangeError):
     pass
 
+
 class InvalidAddress(ExchangeError):
+    pass
+
+class AddressPending(InvalidAddress):
+    pass
+
+class NotSupported(ExchangeError):
     pass
 
 class ArgumentsRequired(ExchangeError):
@@ -45,4 +62,23 @@ class AuthenticationError(ExchangeError):
     pass
 
 class InsufficientFunds(ExchangeError):
+    pass
+
+# inherited from InvalidOrder
+class OrderNotFound(InvalidOrder):
+    pass
+
+class OrderNotCached(InvalidOrder):
+    pass
+
+class CancelPending(InvalidOrder):
+    pass
+
+class OrderImmediatelyFillable(InvalidOrder):
+    pass
+
+class OrderNotFillable(InvalidOrder):
+    pass
+
+class DuplicateOrderId(InvalidOrder):
     pass
