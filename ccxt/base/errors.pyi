@@ -1,15 +1,48 @@
+# ccxt error hierchary
 
 class BaseError(Exception):
     pass
 
-class RequestTimeout(BaseError):
+class NetworkError(BaseError):
     pass
 
 class ExchangeError(BaseError):
     pass
 
-class ExchangeNotAvailable(ExchangeError):
+# derived from network error
+class RequestTimeout(NetworkError):
     pass
 
+class DDoSProtection(NetworkError):
+    pass
+
+class ExchangeNotAvailable(NetworkError):
+    pass
+
+class InvalidNonce(NetworkError):
+    pass
+
+# derived from ExchangeError
 class BadRequest(ExchangeError):
+    pass
+
+class BadResponse(ExchangeError):
+    pass
+
+class NotSupported(ExchangeError):
+    pass
+
+class InvalidOrder(ExchangeError):
+    pass
+
+class InvalidAddress(ExchangeError):
+    pass
+
+class ArgumentsRequired(ExchangeError):
+    pass
+
+class AuthenticationError(ExchangeError):
+    pass
+
+class InsufficientFunds(ExchangeError):
     pass
