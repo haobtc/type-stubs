@@ -38,7 +38,6 @@ class BadResponse(ExchangeError):
 class NullResponse(BadResponse):
     pass
 
-
 class NotSupported(ExchangeError):
     pass
 
@@ -50,9 +49,6 @@ class InvalidAddress(ExchangeError):
     pass
 
 class AddressPending(InvalidAddress):
-    pass
-
-class NotSupported(ExchangeError):
     pass
 
 class ArgumentsRequired(ExchangeError):
